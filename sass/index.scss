@@ -1,0 +1,833 @@
+@charset "UTF-8";
+@import "rest";
+
+$wrap-width:1258px; //定宽1258
+$top-head-height:64px;//头部高度
+$top-head-icon-mgt:24px;//头部图标margin高度
+$bgcolor:#f5f5f5;   //背景颜色
+$n-font-color:#333; //默认字体颜色
+$n-font-color2:#999; //默认字体颜色2
+$n-font-money:#cc9966; //金额颜色
+$main-mgl:138px;  //主体距离左侧距离
+$border-color:#b9bcbe;//输入框颜色
+$border-color2:#eeeeee;//输入框颜色2
+$aside-li-mgr:8px;  //内容页底部列表margin-right
+%pay-list{
+  margin-bottom: 27px;
+  width: 150px;
+  height: 50px;
+  outline: 1px solid $border-color2;
+  overflow: hidden;
+  cursor: pointer;
+}//支付页面列表
+%wrap{
+  position: relative;
+  top: $top-head-height + 6;
+  width: 89.941%;
+  margin-left: $main-mgl;
+  overflow: hidden;
+}
+%aside-bock-a{
+  display: block;
+  font-size: 1.2em;
+  color: #ffffff;
+}
+%trans{
+  -webkit-transition: all .3s ease-in-out 0s;-moz-transition: all .3s ease-in-out 0s;-ms-transition: all .3s ease-in-out 0s;
+      -o-transition: all .3s ease-in-out 0s;transition: all .3s ease-in-out 0s;
+} //过度效果
+
+@import "icon1/*.png";
+
+body{
+  background: $bgcolor;
+  color: $n-font-color;
+}
+a{
+  color: $n-font-color;}
+.wrap{
+  margin: 0 auto;
+  padding-left: 138px;
+  overflow: hidden;}
+/*通用头部开始*/
+.top-head {
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+  height: $top-head-height;
+  background: #010101;
+  background-image: linear-gradient(90deg, #010101, #898989);
+  overflow: hidden;
+  em {
+    padding-left: 16px;
+      float: left;
+      font-size: 1.8em;
+      line-height: 3.556em;
+        a{
+          color: #ffffff;}
+    }
+}
+.nav-item{
+  padding-right: 36px;
+  float: right;
+    li{
+      margin-left: 30px;
+      height: $top-head-height;
+      float: right;
+      color: #ffffff;
+        a{
+          color: #ffffff;
+          font-size: 1.6em;
+          line-height: 4em;}
+    }
+  .gift{
+    padding-right: 4px;
+    margin-top: $top-head-icon-mgt;
+    float: left;
+    width: 16px;
+    height: 16px;
+    @include icon1-sprite(icon-buy);
+  }
+  .more{
+    padding-right: 4px;
+    margin-top: $top-head-icon-mgt;
+    float: left;
+    width: 16px;
+    height: 16px;
+    @include icon1-sprite(icon-more);
+  }
+  .user-name{
+    margin-left: 10px;
+  }
+  .user-pic{
+    margin-top: 6px;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #393939;
+    border-radius: 50%;
+    background: #000;
+    overflow: hidden;
+    a{line-height: 2em;}
+      img{
+        width: 101%;}
+  }
+}
+/*通用头部结束*/
+
+/*通用尾部开始*/
+.footer {
+  position: relative;
+  height: 168px;
+  background: #000000;
+  overflow: hidden;
+  p {
+    color: #bbb;
+    text-align: center;
+      a{
+        color: #bbb;
+      }
+  }
+  .footer-p1 {
+    margin-top: 28px;
+    height: 38px;
+    font-size: 1.4em;
+    line-height: 4em;
+  }
+  .footer-p2{
+    height: 38px;
+    font-size: 1.4em;
+    line-height: 3em;
+  }
+  .footer-p3{
+    margin-top: 30px;
+    height: 26px;
+    font-size: 1.2em;
+    line-height: 2em;
+  }
+  .icon-wb {
+    width: 29px;
+    height: 24px;
+    display: inline-block;
+    @include icon1-sprite(icon-wb);
+  }
+  .icon-wx {
+    margin-left: 40px;
+    width: 32px;
+    height: 24px;
+    display: inline-block;
+    @include icon1-sprite(icon-wx);
+  }
+}
+/*通用尾部结束*/
+
+/*左侧浮动栏*/
+.left-nav {
+  *float: left;
+  position: fixed;
+  z-index: 9999;
+  top: $top-head-height + 8;
+  width: 82px;
+}
+.left-nav-list{
+  li {
+    margin-bottom: 3px;
+    width: 126px;
+    height: 126px;
+    @extend %trans;
+    opacity: .8;
+      img{
+        width: 100%;}
+    &:hover {
+      opacity: 1;
+    }
+  }
+    a {
+      font-size: 3.4em;
+      line-height: 3.706em;
+      font-weight: bold;
+      text-align: center;
+      color: #ffffff;
+      height: 82px;
+      display: block;
+    }
+  .first-bk{
+    background: #000;
+  }
+}
+/*左侧浮动栏结束*/
+
+/*首页列表部分*/
+.list-wrap {
+  padding-bottom: 170px;
+  @extend %wrap;
+  width: 100%;
+  margin-left: 0;
+}
+.main-list{
+  overflow: hidden;
+  li{
+    position: relative;
+    margin: 0 2px 8px;
+    float: left;
+    width: 32.5%;
+    height: 552px;
+    overflow: hidden;
+    background: #fff;}
+  .main-list-img{
+    height: 360px;
+    img{
+      width: 100%;}
+  }
+  .main-list-info{
+    position: relative;
+    top: -66px;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 3%;
+    width: 83%;
+    background: #ffffff;
+      header{
+        font-size: 3em;
+      }
+      p{
+        margin: 10px 0;
+        font-size: 14px;
+        line-height: 1.8em;
+        color: $n-font-color2;
+      }
+  }
+}
+@media (min-width: 1280px) {
+  .main-list li {
+    width: 24.5%;
+  }
+}
+/*首页列表部分结束*/
+
+/*show页 内容部分*/
+.show-wrap{
+  @extend %wrap;
+  padding-bottom: 70px;
+  width: auto;
+  margin-left: 0;
+  padding-right: 380px;
+}
+.show-content{
+  width: 100%;
+  overflow: hidden;
+  h1{
+    margin: 22px 0;
+    font-size: 5.6em;
+    line-height: 1.4em;
+    font-weight: normal;
+  }
+  .price{
+    height: 40px;
+    font-size: 2em;
+    line-height: 2em;
+    color:$n-font-money;}
+  p{
+    font-size: 1.8em;
+    color: #999999;
+    line-height: 1.5em;}
+  img{
+    margin: 10px 0;
+    width: 100%;}
+}
+.buy-item{
+  position: fixed;
+  z-index: 9999;
+  top: 72px;
+  right: 0;
+  width: 338px;
+  padding: 12px 15px;
+  min-height: 500px;
+  background: #ffffff;
+}
+.buy-item-tt{
+  height: 100px;
+  overflow: hidden;
+    span{
+      float: left;
+      width: 100px;
+      height: 100px;
+      overflow: hidden;
+        img{
+          width: 100%;}
+    }
+    h2{
+      padding-left: 10px;
+      height: 40px;
+      font-size: 2em;
+      font-weight: normal;
+      line-height: 40px;
+      overflow: hidden;}
+    em{
+      float: left;
+      padding-left: 10px;
+      font-size: 1.2em;
+      height: 20px;
+      line-height: 20px;
+      color: $n-font-money;
+    }
+    i{
+      float: left;
+      padding-left: 10px;
+      width: 228px;
+      height: 38px;
+      font-size: 12px;
+      color: #999999;
+      line-height: 1.8em;
+    }
+}
+.buy-form{
+  padding-top: 24px;
+  overflow: hidden;
+  p{
+    margin-bottom: 12px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 1.4em;
+    color: #666666;
+      em{
+        padding-left: 10px;
+        color: $n-font-money;}
+  }
+  .buy-third-p{
+    margin-bottom: 5px;
+  }
+}
+.buy-first-p{
+  label{
+    padding-right: 5px;}
+  .tool {
+    margin: 0 4px;
+    width: 12px;
+    height: 12px;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: center;
+    font-weight: bolder;
+    display: inline-block;
+    border: 1px solid $border-color;
+    font-family: 'tahoma';
+    cursor: pointer;
+  }
+  .tool2{
+    margin-left: 8px;
+  }
+}
+
+.buy-btn{
+  position: relative;
+  width: 100%;
+  height: 58px;
+  font-size: 20px;
+  color: #ffffff;
+  font-family: "Microsoft Yahei";
+  font-weight: normal;
+  background-color: #fa3471;
+  cursor: pointer;
+    &::before{
+      content: '';
+      width: 25px;
+      height: 24px;
+      position: absolute;
+      top: 18px;
+      left: 50px;
+      display: block;
+      @include icon1-sprite(icon-buy2);
+    }
+}
+.input-tp1 {
+  width: 240px;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid $border-color;
+  text-indent: 5px;
+  box-shadow:inset 0 1px 3px #e7e7e7;
+  color: #333;
+}
+.input-tp2{
+  width: 336px;}
+.input-tp3{
+  margin-right: 6px;
+  width: 74px;}
+.input-tp4 {
+  width: 56px;
+}
+.aside-list-wrap{
+  width: 59%;
+  overflow: hidden;
+}
+.aside-list{
+  overflow: hidden;
+  li{
+    margin-right: $aside-li-mgr;
+    float: left;
+    width: 32.5%;
+    height: 370px;
+    background: #ffffff;
+    &:last-of-type{margin-right: 0;}
+  }
+  .aside-list-last-li{
+    margin-right: 0;
+  }
+  .aside-list-img{
+    height: 234px;
+    img{ width: 100%;}
+  }
+  .aside-list-info{
+    position: relative;
+    top: -44px;
+    padding: 4.7%;
+    margin: 0 5% 0 5%;
+    width: 83%;
+    background: #ffffff;
+      header{
+        font-size: 2em;
+      }
+    .price{
+      font-size: 1.6em;
+      line-height: 1.6em;
+      color:$n-font-money;}
+    p{
+      font-size: 1.2em;
+      line-height: 1.8em;
+      color: $n-font-color2;}
+  }
+}
+.block-item{
+  margin: 64px auto 170px auto;
+  width: 80%;
+  overflow: hidden;
+  div{
+    margin-top: 10px;
+    @extend %trans;
+      &:hover{
+        opacity: .9;
+      }
+  }
+  .content{
+    padding: 10px;
+    float: left;
+    width: 170px;
+    height: 40px;
+    background: #d0d0d0;
+      a{
+        display: block;
+        color: #ffffff;
+        font-size: 1.6em;
+      }
+  }
+  .info{
+    margin-left: 9px;
+    float: left;
+    width: 104px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background: #555555;
+    a{
+      @extend %aside-bock-a;
+      }
+  }
+  .other{
+    margin-left: 9px;
+    float: left;
+    width: 104px;
+    height: 60px;
+    @extend %trans;
+      &:hover{
+        opacity: 1;
+      }
+      p{
+        text-align: center;
+        height: 27px;
+        line-height: 27px;
+        background: #555555;
+          @extend %trans;
+          &:hover{
+            opacity: .9;
+          }
+          a{
+            @extend %aside-bock-a;
+          }
+      }
+    .mgt7{
+      margin-top: 7px;}
+  }
+  .record{
+    margin-left: 9px;
+    float: left;
+    width: 170px;
+    height: 27px;
+    line-height: 27px;
+    background: #555;
+    text-align: center;
+      a{
+        @extend %aside-bock-a;
+      }
+  }
+}
+/*show页 内容部分结束*/
+
+/*indent页 开始*/
+.indent-wrap{
+  @extend %wrap;
+  width: 100%;
+  padding-bottom: 70px;
+}
+.indent-wrap-left{
+  float: left;
+  width: 47.96875%;
+  overflow: hidden;
+}
+.indent-wrap-right{
+  float: left;
+  margin-left: 18px;
+  width: 28.75%;
+  overflow: hidden;
+}
+.indent-wrap-left-item{
+  width: 100%;
+  padding-bottom: 50px;
+  background: #fdfdfd;
+  overflow: hidden;
+    h2{
+      position: relative;
+      height: 36px;
+      line-height: 36px;
+      font-size: 1.4em;
+      color: #666666;
+      font-weight: normal;
+      text-indent: 14px;
+      background: #ebebeb;
+      overflow: hidden;
+    }
+    .modification {
+      position: absolute;
+      top: 0;
+      right: 14px;
+    }
+    p{
+      height: 42px;
+      line-height: 42px;
+    }
+  label{
+    font-size: 1.2em;}
+}
+.input-ck{
+  margin: 14px 6px 0 22px;
+  float: left;
+  width: 14px;
+  height: 14px;
+}
+.input-textarea{
+  margin-left: 22px;
+  padding: 10px;
+  width: 90%;
+  height: 30px;
+  border: 1px solid $border-color;
+}
+.payment{
+  padding: 32px 0 0 40px;
+  overflow: hidden;
+  dt{
+    @extend %pay-list;
+    border: 1px solid $border-color2 \9;
+    &:hover{
+      /*border: 1px solid #ff5426 \9;
+      outline: 2px solid #ff5426;*/
+      opacity: .9;
+    }
+  }
+}
+.indent-bank-list{
+  padding: 12px 0 0 40px;
+  overflow: hidden;
+  li{
+    margin-right: 30px;
+    float: left;
+    border: 1px solid $border-color2 \9;
+    @extend %pay-list;
+    &:hover {
+      /*border: 1px solid #ff5426 \9;
+      outline: 2px solid #ff5426;*/
+      opacity: .9;
+    }
+  }
+}
+.indent-wrap-left-item .active-pay{
+  position: relative;
+  border: 2px solid #ff5426 \9;
+  outline: 2px solid #ff5426;
+    &::after{
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      right: -1px;
+      width: 21px;
+      height: 21px;
+      display: block;
+      overflow: hidden;
+      @include icon1-sprite(active);
+    }
+}
+.mgt20{
+  margin-top: 20px;}
+.indent-wrap-left-info{
+  margin: 40px 0 0 22px;
+  overflow: hidden;
+  .jia-hao,.jian-hao{
+    margin: 7px 5px 0 0;
+    float: left;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+  }
+  .jia-hao{
+    @include icon1-sprite(jia);
+  }
+  .jian-hao{
+    @include icon1-sprite(jian);
+  }
+    dt{
+      height: 30px;
+      line-height: 30px;
+      font-weight: bold;
+      font-size: 1.4em;
+    }
+  .red-bag{
+    margin-bottom: 10px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 1.4em;}
+  label{
+    margin-right: 10px;
+    font-size: 1em;}
+  .input-text{
+    width: 116px;
+    height: 28px;
+    text-indent: 4px;
+    line-height: 28px;
+    border: 1px solid $border-color;
+  }
+  .ck-btn{
+    width: 84px;
+    height: 30px;
+    background: #333333;
+    color: #ffffff;
+    @extend %trans;
+    cursor: pointer;
+      &:hover{
+        opacity: .9;
+      }
+  }
+  .invoice-info {
+    padding: 10px;
+    font-size: 1.4em;
+  }
+}
+.commodity-list{
+  margin: 16px 8px 0 8px;
+    li{
+      padding: 8px 7px;
+      height: 100px;
+      overflow: hidden;
+      border-bottom: 1px solid $border-color2;}
+    .commodity-list-pic{
+      margin-right: 10px;
+      float: left;
+      width: 100px;
+      height: 100px;
+      overflow: hidden;
+        img{
+          width: 100%;}
+    }
+    .commodity-list-tt{
+      height: 38px;
+      line-height: 18px;
+      display: block;
+      overflow: hidden;
+        a{
+          font-size: 1.6em;}
+    }
+  .commodity-list-price{
+    margin: 8px 0;
+    height: 14px;
+    display: block;
+    font-size: 1.2em;
+    color: $n-font-money;
+  }
+  .commodity-list-info{
+    height: 30px;
+    font-size: 12px;
+    color: #999999;
+    line-height: 16px;
+    overflow: hidden;
+  }
+}
+.subtotal{
+  margin:0 8px;
+  height: 30px;
+  font-size: 1.2em;
+  line-height: 30px;
+  text-align: right;
+  color: $n-font-color2;
+    em{
+      color: $n-font-money;
+    }
+}
+.pdb10{
+  padding-bottom: 10px;}
+.item-address{
+  padding: 10px 20px;
+  address{
+    overflow: hidden;
+    font-size: 1.4em;
+    line-height: 1.875em;
+  }
+  .address-info{
+    float: right;
+    width: 78%;
+  }
+}
+.pay-for{
+  margin: 0 20px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 1.6em;
+  text-align: right;
+  color: $n-font-color2;
+    em{
+      color: $n-font-money;
+    }
+}
+.indent-wrap-right-btn {
+  width: 100%;
+  height: 60px;
+  background: #ff9933;
+  font-size: 2.4em;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: "SimHei";
+  text-shadow: 0 1px 1px #bf7326;
+  @extend %trans;
+  &:hover {
+    opacity: .9;
+  }
+}
+/*indent页 结束*/
+
+/*login页 开始*/
+.login{
+  position: relative;
+  margin: 150px auto;
+  width: 400px;
+  height: 500px;
+  overflow: hidden;
+  background: #ffffff;
+    .active{
+      z-index: 1;}
+}
+.login-tab-tt {
+  height: 61px;
+  background: #333333;
+    .active-log{
+      background: #ffffff;
+      color: #000000;
+    }
+}
+.register,.log-in{
+  float: left;
+  margin-top: 3px;
+  width: 200px;
+  height: 58px;
+  font-size: 2.4em;
+  line-height: 58px;
+  color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+}
+.register-content,.log-in-content{
+  position: absolute;
+  top: 61px;
+  left: 0;
+  z-index: -1;
+  padding: 32px 0 42px 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+}
+.login-input-text {
+  margin: 0 auto 14px auto;
+  width: 87.5%;
+  height: 40px;
+  display: block;
+  line-height: 40px;
+  font-size: 18px;
+  text-indent: 16px;
+  border: 1px solid $border-color;
+  box-shadow: inset 0 1px 3px #e3e3e3;
+  color: #666666;
+  font-family: "Microsoft Yahei";
+}
+.login-btn{
+  margin: 0 auto;
+  width: 87.5%;
+  height: 60px;
+  display: block;
+  font-size: 2.4em;
+  color: #ffffff;
+  line-height: 60px;
+  cursor: pointer;
+  font-family: "Microsoft Yahei";
+  background: #333333;
+  @extend %trans;
+    &:hover{
+      opacity: .9;
+    }
+}
+/*login页 结束*/
