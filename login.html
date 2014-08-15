@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/index.css"/>
+    <script src="js/html5shiv-printshiv.min.js"></script>
+</head>
+<body>
+    <div class="login">
+        <div class="login-tab-tt">
+            <div class="register active-log" id="j-register">
+                注册
+            </div>
+            <div class="log-in" id="j-login">
+                登录
+            </div>
+        </div>
+        <div class="register-content active" id="j-register-con">
+            <input class="login-input-text" type="text" name="" id="" value="手机号码：" id="" onfocus="if (value =='手机号码：'){value =''}" onblur="if (value ==''){value='手机号码：'}" placeholder="手机号码："/>
+
+            <input class="login-input-text" type="text" name="" id="" value="设置密码：" id="" onfocus="if (value =='设置密码：'){value =''}" onblur="if (value ==''){value='设置密码：'}" placeholder="手机号码："/>
+
+            <input class="login-input-text" type="text" name="" id="" value="确认密码：" id="" onfocus="if (value =='确认密码：'){value =''}" onblur="if (value ==''){value='确认密码：'}" placeholder="确认密码："/>
+
+            <input class="login-input-text" type="text" name="" id="" value="真实姓名：" id="" onfocus="if (value =='真实姓名：'){value =''}" onblur="if (value ==''){value='真实姓名：'}" placeholder="真实姓名："/>
+
+            <input class="login-input-text" type="text" name="" id="" value="出生日期：格式  YYYY-MM-DD" id="" onfocus="if (value =='出生日期：格式  YYYY-MM-DD'){value =''}" onblur="if (value ==''){value='出生日期：格式  YYYY-MM-DD'}" placeholder="出生日期：格式  YYYY-MM-DD"/>
+            <button type="button" class="login-btn">立即注册</button>
+        </div>
+        <div class="log-in-content" id="j-login-con">
+            <input class="login-input-text" type="text" name="" id="" value="手机号码：" id="" onfocus="if (value =='手机号码：'){value =''}" onblur="if (value ==''){value='手机号码：'}" placeholder="手机号码："/>
+            <input class="login-input-text" type="text" name="" id="" value="密码：" id="" onfocus="if (value =='密码：'){value =''}" onblur="if (value ==''){value='密码：'}" placeholder="密码："/>
+             <button type="button" class="login-btn">立即登录</button>
+        </div>
+    </div>
+    <script>
+        window.onload=function(){
+            if(!document.getElementById('j-register') && !document.getElementById('j-login') && !document.getElementById('j-register-con') && !document.getElementById('j-login-con')){
+                return false
+            }
+            var BtnReg =document.getElementById('j-register');
+            var BtnLog =document.getElementById('j-login');
+            var BtnRegCon =document.getElementById('j-register-con');
+            var BtnLogCon =document.getElementById('j-login-con');
+            BtnReg.onclick=function(){
+                BtnReg.className = 'register active-log';
+                BtnLog.className = 'log-in';
+                BtnRegCon.className ='register-content active';
+                BtnLogCon.className ='log-in-content';
+            };
+            BtnLog.onclick=function(){
+                BtnLog.className = 'log-in active-log';
+                BtnReg.className = 'register';
+                BtnRegCon.className ='register-content';
+                BtnLogCon.className ='log-in-content active';
+            };
+        }
+    </script>
+</body>
+</html>
