@@ -880,9 +880,18 @@ a{
   height: 245px;
 }
 .pay-mid-info{
+  margin: 60px 0 0 40px;
   height: 34px;
   line-height: 34px;
   font-size: 1.4em;
   color: $n-font-color3;
+    em{
+      color: #f84c00;}
 }
+.pay-mid-btn{
+  width: 214px;
+  height: 34px;
+  font-size: 1.8em;
+  color: #ffffff;
+  background: $n-font-color;}
 /*pay-mid 结束*/
