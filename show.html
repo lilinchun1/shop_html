@@ -111,11 +111,11 @@
                 </li>
             </ul>
         </aside>
-        <div class="buy-item-add">
+        <div class="buy-item-add" id="j-item1">
             <p>您的礼物篮是空的</p>
             <button type="button" class="buy-item-add-btn"><span></span>将它放入礼物篮</button>
         </div>
-        <div class="buy-item">
+        <div class="buy-item" id="j-item2">
             <article class="buy-item-tt">
                 <span>
                     <img src="images/pic1.jpg" alt=""/>
@@ -207,5 +207,18 @@
         © bbfstore.com版权所有 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 京ICP备13051768-2
     </p>
 </footer>
+<script>
+    window.onload=function(){
+        if(!document.getElementById('j-item1') && !document.getElementById('j-item2')){
+            return false
+        }
+        var btn1 = document.getElementById('j-item1');
+        var btn2 = document.getElementById('j-item2');
+        btn1.onclick=function(){
+            btn1.style.display = 'none';
+            btn2.style.display = 'block';
+        }
+    }
+</script>
 </body>
 </html>
