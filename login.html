@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" href="styles/index.css"/>
+    <link rel="stylesheet" href="styles/jquery.fs.selecter.css"/>
     <script src="js/html5shiv-printshiv.min.js"></script>
 </head>
 <body>
@@ -82,6 +83,13 @@
                 BtnLogCon.className ='log-in-content active';
             };
         }
+    </script>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery.fs.selecter.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".select-date").selecter();
+        })
     </script>
 </body>
 </html>
