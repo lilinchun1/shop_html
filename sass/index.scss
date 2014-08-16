@@ -7,6 +7,7 @@ $top-head-icon-mgt:24px;//头部图标margin高度
 $bgcolor:#f5f5f5;   //背景颜色
 $n-font-color:#333; //默认字体颜色
 $n-font-color2:#999; //默认字体颜色2
+$n-font-color3:#666; //默认字体颜色3
 $n-font-money:#cc9966; //金额颜色
 $main-mgl:138px;  //主体距离左侧距离
 $border-color:#b9bcbe;//输入框颜色
@@ -851,7 +852,7 @@ a{
 }
 .p-404{
   padding: 144px 0 0 270px;
-  font-size: 18px;
+  font-size: 1.8em;
   color: #333333;
     a{
       color: #33ccff;}
@@ -866,3 +867,22 @@ a{
   overflow: hidden;
   background: url(../images/ufo.png) 0 0 no-repeat;}
 /*404页 结束*/
+
+/*pay-mid 开始*/
+.pay-mid-wrap{
+  @extend %wrap;
+  padding-bottom: 70px;
+  width: auto;
+  margin-left: 0;
+  padding-right: 380px;
+}
+.pay-mid-item{
+  height: 245px;
+}
+.pay-mid-info{
+  height: 34px;
+  line-height: 34px;
+  font-size: 1.4em;
+  color: $n-font-color3;
+}
+/*pay-mid 结束*/
