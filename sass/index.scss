@@ -284,7 +284,8 @@ a{
   width: 338px;
   padding: 12px 15px;
   min-height: 500px;
-  background: #ffffff;
+  background: #fdfdfd;
+  display: none;
 }
 .buy-item-tt{
   height: 100px;
@@ -510,6 +511,39 @@ a{
       a{
         @extend %aside-bock-a;
       }
+  }
+}
+.buy-item-add{
+  position: fixed;
+  z-index: 9999;
+  top: 72px;
+  right: 0;
+  width: 338px;
+  padding: 12px 15px;
+  min-height: 240px;
+  background: #fdfdfd url("../images/bbf-logo-h-sm.png") center 8px no-repeat;
+    p{
+      padding-top: 90px;
+      font-size: 1.8em;
+      text-align: center;
+    }
+  .buy-item-add-btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 2.4em;
+    font-family: "Microsoft Yahei";
+    span{
+      width: 26px;
+      height: 23px;
+      float: left;
+      @include icon1-sprite(icon-buy2);
+    }
   }
 }
 /*show页 内容部分结束*/
