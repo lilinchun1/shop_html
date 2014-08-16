@@ -767,7 +767,7 @@ a{
   position: relative;
   margin: 150px auto;
   width: 400px;
-  height: 500px;
+  height: 640px;
   overflow: hidden;
   background: #ffffff;
     .active{
@@ -794,13 +794,15 @@ a{
 }
 .register-content,.log-in-content{
   position: absolute;
-  top: 61px;
+  top: 94px;
   left: 0;
   z-index: -1;
-  padding: 32px 0 42px 0;
+  //padding: 32px 0 42px 0;
   width: 100%;
-  height: 100%;
+  height: 84%;
   background: #ffffff;
+}
+.log-in-content{  background: #ffffff url("../images/bbf-logo-h-sm.png") bottom center no-repeat;
 }
 .login-input-text {
   margin: 0 auto 14px auto;
@@ -830,6 +832,54 @@ a{
     &:hover{
       opacity: .9;
     }
+}
+.date-item{
+  padding-left: 24px;
+  p{
+    height: 40px;
+    font-size: 1.8em;
+    color: $n-font-color3;
+  }
+  .select-date{
+    padding: 10px 0;
+    margin-right: 20px;
+    width: 100px;
+    //height: 40px;
+    line-height: 40px;
+    border: 1px solid $border-color;
+    box-shadow: inset 0 1px 3px #e3e3e3;
+    color: $n-font-color;
+      option{
+        width: 100px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;}
+  }
+
+}
+.verification-item{
+  margin-top: 15px;
+    a{
+      line-height: 42px;
+      color: #3399cc;
+    }
+}
+.input-verification{
+  margin: 0 0 0 24px;
+  width: 165px;
+  float: left;
+}
+.yzm-pic{
+  margin: 0 14px;
+  float: left;
+  overflow: hidden;
+  width: 70px;
+  height: 42px;}
+.login-alert{
+  height: 40px;
+  line-height: 40px;
+  color: #ff3333;
+  text-align: center;
 }
 /*login页 结束*/
 
