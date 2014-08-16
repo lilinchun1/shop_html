@@ -840,5 +840,29 @@ a{
 /*story页 结束*/
 
 /*404页 开始*/
-
+.wrap-404{
+  @extend %wrap;
+  padding-bottom: 70px;
+  width: auto;
+  margin-left: 0;
+  padding-right: 380px;
+  height: 640px;
+  background: url(../images/bbf-logo-h.png) 40px center no-repeat;
+}
+.p-404{
+  padding: 144px 0 0 270px;
+  font-size: 18px;
+  color: #333333;
+    a{
+      color: #33ccff;}
+}
+.ufo{
+  position: relative;
+  top: 200px;
+  left: 118px;
+  width: 124px;
+  height: 89px;
+  display: block;
+  overflow: hidden;
+  background: url(../images/ufo.png) 0 0 no-repeat;}
 /*404页 结束*/
