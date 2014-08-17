@@ -25,7 +25,7 @@ $aside-li-mgr:8px;  //内容页底部列表margin-right
   position: relative;
   top: $top-head-height + 6;
   width: 89.941%;
-  margin-left: $main-mgl;
+  //margin-left: $main-mgl;
   overflow: hidden;
 }
 %aside-bock-a{
@@ -441,7 +441,7 @@ a{
   }
 }
 .block-item{
-  margin: 64px auto 170px auto;
+  margin: 64px auto 170px 138px;
   width: 80%;
   overflow: hidden;
   div{
@@ -1001,3 +1001,37 @@ a{
     }
 }
 /*pay-mid 结束*/
+
+/*personal-info 开始*/
+.personal-info-wrap{
+  @extend %wrap;
+  width: 78.125%;
+  padding-bottom: 70px;
+  background: #ffffff;
+}
+.personal-left-wrap{
+  float: left;
+  width: 19%;
+  overflow: hidden;
+}
+.personal-right-wrap{
+  float: right;
+  width: 80%;
+  overflow: hidden;
+}
+.personal-tablist{
+  li{
+    margin-bottom: 1px;
+    height: 36px;
+    line-height: 36px;
+    background: #ededed;
+    text-indent: 14px;
+      a{
+        height: 36px;
+        display: block;
+        font-size: 1.4em;
+        color: $n-font-color3;
+      }
+  }
+}
+/*personal-info 结束*/
