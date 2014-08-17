@@ -1008,6 +1008,7 @@ a{
 .personal-info-wrap{
   @extend %wrap;
   width: 78.125%;
+  min-width: 1000px;
   padding-bottom: 140px;
   background: #ffffff;
 }
