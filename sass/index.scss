@@ -1049,6 +1049,7 @@ a{
     margin-bottom: 12px;
   }
   label{
+
     height: 36px;
     line-height: 36px;
     padding-right: 15px;
@@ -1089,3 +1090,16 @@ a{
   font-size: 1.4em;
 }
 /*personal-info 结束*/
+
+/*personal-password 开始*/
+.personal-password-content{
+  label {
+    float: left;
+    width: 60px;
+    text-align: right;
+  }
+  .personal-info-btn{
+    margin-left: 75px;
+  }
+}
+/*personal-password 结束*/
