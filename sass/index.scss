@@ -12,6 +12,7 @@ $n-font-money:#cc9966; //金额颜色
 $main-mgl:138px;  //主体距离左侧距离
 $border-color:#b9bcbe;//输入框颜色
 $border-color2:#eeeeee;//输入框颜色2
+$border-color3:#ebebeb;//边框颜色
 $aside-li-mgr:8px;  //内容页底部列表margin-right
 %pay-list{
   margin-bottom: 27px;
@@ -586,7 +587,7 @@ a{
       color: #666666;
       font-weight: normal;
       text-indent: 14px;
-      background: #ebebeb;
+      background: $border-color3;
       overflow: hidden;
     }
     .modification {
@@ -1019,7 +1020,7 @@ a{
   float: left;
   width: 80%;
   min-height: 400px;
-  border-left: 1px solid #ebebeb;
+  border-left: 1px solid $border-color3;
   overflow: hidden;
 }
 .personal-tablist{
@@ -1104,4 +1105,72 @@ a{
 }
 /*personal-password 结束*/
 
-/**/
+/*personal-list 开始*/
+.personal-list-content{
+  padding: 10px;
+}
+.personal-list-tt{
+  width: 788px;
+  height: 30px;
+  line-height: 30px;
+  background: $border-color3;
+    span{
+      display: block;
+      text-align: center;
+      font-size: 1.4em;
+      float: left;}
+    .span1{
+      width: 282px;}
+    .span2{
+      width: 98px;
+    }
+}
+.personal-list-info{
+  width: 786px;
+  margin-top: 1px;
+  border: 1px solid $border-color3;
+  border-bottom: 0 none;
+    li{
+      overflow: hidden;
+      height: 72px;}
+  .div1,.div2 {
+      float: left;
+      border-right: 1px solid $border-color3;
+      border-bottom: 1px solid $border-color3;
+      height: 71px;
+      overflow: hidden;
+    }
+    .div1{
+      width: 286px;}
+    .div2{
+      width: 99px;
+    }
+    .div3{
+      border-right: 0 none;}
+  .item-pic{
+    float: left;
+    margin: 10px 0 0 10px;
+    width: 50px;
+    height: 50px;
+    border: 1px solid $border-color3;
+    overflow: hidden;
+      img{
+        width: 100%;}
+  }
+  .item-tt{
+    margin: 10px 0 0 70px;
+    height: 36px;
+    overflow: hidden;
+    font-size: 1.2em;
+    color: $n-font-color2;
+  }
+  .item-number{
+    margin: 0 0 0 70px;
+    height: 14px;
+    line-height: 14px;
+    overflow: hidden;
+    font-size: 1.2em;
+    color: #3399ff;
+  }
+}
+/*personal-list 结束*/
