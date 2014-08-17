@@ -9,6 +9,7 @@ $n-font-color:#333; //默认字体颜色
 $n-font-color2:#999; //默认字体颜色2
 $n-font-color3:#666; //默认字体颜色3
 $n-font-money:#cc9966; //金额颜色
+$n-font-blue:#3399ff; //字体颜色4
 $main-mgl:138px;  //主体距离左侧距离
 $border-color:#b9bcbe;//输入框颜色
 $border-color2:#eeeeee;//输入框颜色2
@@ -1007,7 +1008,7 @@ a{
 .personal-info-wrap{
   @extend %wrap;
   width: 78.125%;
-  padding-bottom: 70px;
+  padding-bottom: 140px;
   background: #ffffff;
 }
 .personal-left-wrap{
@@ -1019,7 +1020,7 @@ a{
 .personal-right-wrap {
   float: left;
   width: 80%;
-  min-height: 400px;
+  min-height: 460px;
   border-left: 1px solid $border-color3;
   overflow: hidden;
 }
@@ -1120,9 +1121,9 @@ a{
       font-size: 1.4em;
       float: left;}
     .span1{
-      width: 282px;}
+      width: 286px;}
     .span2{
-      width: 98px;
+      width: 99px;
     }
 }
 .personal-list-info{
@@ -1146,7 +1147,14 @@ a{
       width: 99px;
     }
     .div3{
-      border-right: 0 none;}
+      border-right: 0 none;
+      line-height: 71px;
+      text-align: center;
+        a{
+          font-size: 1.2em;
+          color: $n-font-blue;
+        }
+    }
   .item-pic{
     float: left;
     margin: 10px 0 0 10px;
@@ -1170,7 +1178,28 @@ a{
     line-height: 14px;
     overflow: hidden;
     font-size: 1.2em;
-    color: #3399ff;
+    color: $n-font-blue;
+  }
+  .consignee{
+    line-height: 71px;
+    font-size: 1.2em;
+    color: $n-font-color2;
+    text-align: center;
+  }
+  .money{
+    padding-top: 20px;
+    height: 51px;
+    p{
+      font-size: 1.2em;
+      color: $n-font-color2;
+      text-align: center;
+    }
+  }
+  .state{
+    line-height: 71px;
+    font-size: 1.2em;
+    color: #ff9933;
+    text-align: center;
   }
 }
 /*personal-list 结束*/
