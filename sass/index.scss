@@ -804,6 +804,18 @@ a{
     opacity: .9;
   }
 }
+.indent-message{
+  padding: 10px;
+  overflow: hidden;
+  div{
+    margin: 10px 20px;
+    font-size: 1.4em;
+  }
+  input{
+    float: left;
+    margin: 4px 6px 0 0;
+  }
+}
 /*indent页 结束*/
 
 /*login页 开始*/
