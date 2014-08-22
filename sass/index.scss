@@ -15,6 +15,7 @@ $border-color:#b9bcbe;//输入框颜色
 $border-color2:#eeeeee;//输入框颜色2
 $border-color3:#ebebeb;//边框颜色
 $aside-li-mgr:8px;  //内容页底部列表margin-right
+$left-nav-list:108px; //侧边导航块宽高
 %pay-list{
   margin-bottom: 27px;
   width: 150px;
@@ -50,7 +51,7 @@ a{
   color: $n-font-color;}
 .wrap{
   margin: 0 auto;
-  padding-left: 138px;
+  padding-left: $main-mgl;
   overflow: hidden;}
 /*通用头部开始*/
 .top-head {
@@ -65,8 +66,8 @@ a{
   em {
     padding-left: 16px;
       float: left;
-      font-size: 1.8em;
-      line-height: 3.556em;
+      font-size: 1.7em;
+      line-height: 64px;
         a{
           color: #ffffff;}
     }
@@ -81,8 +82,8 @@ a{
       color: #ffffff;
         a{
           color: #ffffff;
-          font-size: 1.6em;
-          line-height: 4em;}
+          font-size: 1.5em;
+          line-height: 64px;}
     }
   .gift{
     padding-right: 4px;
@@ -175,8 +176,8 @@ a{
 .left-nav-list{
   li {
     margin-bottom: 3px;
-    width: 126px;
-    height: 126px;
+    width: $left-nav-list;
+    height: $left-nav-list;
     @extend %trans;
     opacity: .8;
       img{
