@@ -10,7 +10,7 @@ $n-font-color2:#999; //默认字体颜色2
 $n-font-color3:#666; //默认字体颜色3
 $n-font-money:#cc9966; //金额颜色
 $n-font-blue:#3399ff; //字体颜色4
-$main-mgl:138px;  //主体距离左侧距离
+$main-mgl:123px;  //主体距离左侧距离
 $border-color:#b9bcbe;//输入框颜色
 $border-color2:#eeeeee;//输入框颜色2
 $border-color3:#ebebeb;//边框颜色
@@ -26,7 +26,7 @@ $left-nav-list:108px; //侧边导航块宽高
 }//支付页面列表
 %wrap{
   position: relative;
-  top: $top-head-height + 6;
+  top: $top-head-height + 11;
   width: 89.941%;
   //margin-left: $main-mgl;
   overflow: hidden;
@@ -170,7 +170,7 @@ a{
   *float: left;
   position: fixed;
   z-index: 9999;
-  top: $top-head-height + 8;
+  top: $top-head-height + 11;
   width: 82px;
 }
 .left-nav-list{
@@ -574,6 +574,7 @@ a{
   float: left;
   margin-left: 18px;
   width: 28.75%;
+  min-width: 368px;
   overflow: hidden;
 }
 .indent-wrap-left-item{
@@ -768,6 +769,8 @@ a{
 }
 .pdb10{
   padding-bottom: 10px;}
+.pdb0{
+  padding-bottom: 0;}
 .item-address{
   padding: 10px 20px;
   address{
@@ -776,8 +779,7 @@ a{
     line-height: 1.875em;
   }
   .address-info{
-    float: right;
-    width: 78%;
+    width: 85%;
   }
 }
 .pay-for{
@@ -816,6 +818,9 @@ a{
     float: left;
     margin: 4px 6px 0 0;
   }
+}
+.color-org{
+  background: #333333;
 }
 /*indent页 结束*/
 
