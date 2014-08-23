@@ -251,12 +251,13 @@ a{
 /*首页列表部分结束*/
 
 /*show页 内容部分*/
+$show-mgr:29.6875%;
 .show-wrap{
   @extend %wrap;
   padding-bottom: 70px;
   width: auto;
   margin-left: 0;
-  padding-right: 380px;
+  margin-right: $show-mgr;
 }
 .show-content{
   width: 100%;
@@ -285,7 +286,9 @@ a{
   z-index: 9999;
   top: 72px;
   right: 0;
-  width: 338px;
+  width: 29.6875%;
+  max-width: 338px;
+  min-width: 288px;
   padding: 12px 15px;
   min-height: 500px;
   background: #fdfdfd;
@@ -396,7 +399,7 @@ a{
   color: #333;
 }
 .input-tp2{
-  width: 336px;}
+  width: 90%;}
 .input-tp3{
   margin-right: 6px;
   width: 74px;}
@@ -404,7 +407,7 @@ a{
   width: 56px;
 }
 .aside-list-wrap{
-  width: 59%;
+  width: 100%; //59
   overflow: hidden;
 }
 .aside-list{
@@ -522,7 +525,9 @@ a{
   z-index: 9999;
   top: 72px;
   right: 0;
-  width: 338px;
+  width: 29.6875%;
+  max-width: 338px;
+  min-width: 288px;
   padding: 12px 15px;
   min-height: 240px;
   background: #fdfdfd url("../images/bbf-logo-h-sm.png") center 8px no-repeat;
@@ -561,13 +566,27 @@ a{
     span{
       position: relative;
       top: 20px;
-      left: 80px;
+      left: 21.19565217391304%;
       width: 26px;
       height: 23px;
       float: left;
       @include icon1-sprite(icon-buy2);
     }
   }
+}
+@media screen and (max-width:640px) {
+  .buy-item-add{
+    position: relative;
+    top: 0;
+      .buy-item-add-btn{
+        position: relative;
+        bottom: -60px;
+      }
+  }
+  .buy-item{
+    position: relative;
+    top: 0;}
+
 }
 /*show页 内容部分结束*/
 
