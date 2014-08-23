@@ -544,6 +544,17 @@ a{
     font-family: "Microsoft Yahei";
     cursor: pointer;
     @extend %trans;
+      &::before{
+        position: absolute;
+        top: 24px;
+        left: -14px;
+        content: '';
+        width: 0;
+        height: 0;
+        border: 7px solid transparent;
+        border-right: 7px solid #000;
+        display: block;
+      }
       &:hover{
         opacity: 0.9;
       }
