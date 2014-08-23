@@ -180,12 +180,12 @@ a{
     width: $left-nav-list;
     height: $left-nav-list;
     @extend %trans;
-    opacity: .8;
+    //opacity: .8;
       img{
         width: 100%;}
-    &:hover {
+    /*&:hover {
       opacity: 1;
-    }
+    }*/
   }
     a {
       font-size: 3.4em;
