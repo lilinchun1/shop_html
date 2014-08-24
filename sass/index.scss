@@ -254,8 +254,8 @@ a{
 $show-mgr:29.6875%;
 .show-wrap{
   @extend %wrap;
+  width: 70%;
   padding-bottom: 70px;
-  width: auto;
   margin-left: 0;
   margin-right: $show-mgr;
 }
@@ -286,8 +286,7 @@ $show-mgr:29.6875%;
   z-index: 9999;
   top: 72px;
   right: 0;
-  width: 29.6875%;
-  max-width: 338px;
+  width: 24%;
   min-width: 288px;
   padding: 12px 15px;
   min-height: 500px;
@@ -307,10 +306,10 @@ $show-mgr:29.6875%;
     }
     h2{
       padding-left: 10px;
-      height: 40px;
+      max-height: 80px;
       font-size: 2em;
       font-weight: normal;
-      line-height: 40px;
+      line-height: 20px;
       overflow: hidden;}
     em{
       float: left;
@@ -376,7 +375,7 @@ $show-mgr:29.6875%;
   color: #ffffff;
   font-family: "Microsoft Yahei";
   font-weight: normal;
-  background-color: #fa3471;
+  background-color: #333;
   cursor: pointer;
     &::before{
       content: '';
@@ -541,11 +540,9 @@ $show-mgr:29.6875%;
   z-index: 9999;
   top: 72px;
   right: 0;
-  width: 29.6875%;
-  max-width: 338px;
+  width: 26%;
   min-width: 288px;
-  padding: 12px 15px;
-  min-height: 240px;
+  min-height: 260px;
   background: #fdfdfd url("../images/bbf-logo-h-sm.png") center 8px no-repeat;
     p{
       padding-top: 90px;
@@ -559,7 +556,7 @@ $show-mgr:29.6875%;
     width: 100%;
     height: 60px;
     line-height: 60px;
-    background-color: #000000;
+    background-color: #333;
     color: #ffffff;
     font-size: 2.2em;
     font-family: "Microsoft Yahei";
@@ -590,7 +587,9 @@ $show-mgr:29.6875%;
     }
   }
 }
-@media screen and (max-width:640px) {
+@media screen and (max-width:768px) {
+  .show-wrap{
+    width: 100%;}
   .buy-item-add{
     position: relative;
     top: 0;
@@ -608,6 +607,14 @@ $show-mgr:29.6875%;
     position: relative;
     top: 0;}
 
+}
+@media screen and (max-width: 1200px)and(min-width: 1024px) {
+  .show-wrap{
+    width: 68%;}
+}
+@media screen and (max-width: 1024px) and (min-width: 768px){
+  .show-wrap{
+    width: 64%;}
 }
 /*show页 内容部分结束*/
 
