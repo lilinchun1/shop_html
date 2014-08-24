@@ -624,6 +624,7 @@ $show-mgr:29.6875%;
 .indent-wrap{
   @extend %wrap;
   width: 100%;
+  min-width: 862px;
   padding-bottom: 70px;
 }
 .indent-wrap-left{
@@ -632,8 +633,7 @@ $show-mgr:29.6875%;
   overflow: hidden;
 }
 .indent-wrap-right{
-  float: left;
-  margin-left: 18px;
+  float: right;
   width: 28.75%;
   min-width: 368px;
   overflow: hidden;
@@ -892,6 +892,23 @@ $show-mgr:29.6875%;
 .color-org{
   background: #333333;
 }
+
+@media screen and (min-width:1200px) {
+  .indent-wrap-left{
+    width: 63%;}
+}
+@media screen and (max-width:1200px) {
+  .indent-wrap-left{
+    width: 63%;}
+}
+@media screen and (max-width:1140px) {
+  .indent-wrap-left{
+    width: 58%;}
+}
+@media screen and (max-width:1024px) {
+  .indent-wrap-left{
+    width: 55%;}
+}
 @media screen and (max-width: 880px){
   .indent-wrap-left{
     width: 100%;}
@@ -899,6 +916,7 @@ $show-mgr:29.6875%;
     width: 100%;
     margin-left: 0;}
 }
+.indent-min-w{min-width: 862px;}
 /*indent页 结束*/
 
 /*login页 开始*/
