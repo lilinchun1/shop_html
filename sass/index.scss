@@ -890,6 +890,13 @@ $show-mgr:29.6875%;
 .color-org{
   background: #333333;
 }
+@media screen and (max-width: 880px){
+  .indent-wrap-left{
+    width: 100%;}
+  .indent-wrap-right{
+    width: 100%;
+    margin-left: 0;}
+}
 /*indent页 结束*/
 
 /*login页 开始*/
