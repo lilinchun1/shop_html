@@ -892,7 +892,10 @@ $show-mgr:29.6875%;
 .color-org{
   background: #333333;
 }
-
+@media screen and (min-width:1400px) {
+  .indent-wrap-left{
+    width: 70%;}
+}
 @media screen and (min-width:1200px) {
   .indent-wrap-left{
     width: 63%;}
