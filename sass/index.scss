@@ -289,7 +289,7 @@ $show-mgr:29.6875%;
   width: 24%;
   min-width: 288px;
   padding: 12px 15px;
-  min-height: 500px;
+  min-height: 530px;
   background: #fdfdfd;
   display: none;
 }
@@ -410,6 +410,15 @@ $show-mgr:29.6875%;
   -webkit-appearance: none;
   -moz-appearance: none;
 }
+.input-tp5{
+  width: 260px;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 2px 0 2px 0 \9;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
 .select-wap{
   float: left;
   width: 74px;
@@ -419,6 +428,9 @@ $show-mgr:29.6875%;
   border: 1px solid $border-color;
   background:#fff url(../images/select-log.jpg) right center no-repeat;
   overflow: hidden;
+}
+.select-wap2{
+  width: 240px;
 }
 .input-tp4 {
   width: 56px;
