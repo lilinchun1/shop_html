@@ -679,7 +679,7 @@ $show-mgr:29.6875%;
     font-size: 1.2em;}
 }
 .input-ck{
-  margin: 14px 6px 0 22px;
+  margin: 14px 6px 0 0;
   float: left;
   width: 14px;
   height: 14px;
@@ -941,6 +941,8 @@ $show-mgr:29.6875%;
     margin-left: 0;}
 }
 .indent-min-w{min-width: 862px;}
+.pdl42{
+  padding-left: 42px;}
 /*indent页 结束*/
 
 /*login页 开始*/
