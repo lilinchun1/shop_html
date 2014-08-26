@@ -460,7 +460,7 @@ $show-mgr:29.6875%;
     position: relative;
     top: -44px;
     padding: 4.7%;
-    margin: 0 5% 0 5%;
+    margin: 0 auto;
     width: 83%;
     background: #ffffff;
       header{
@@ -622,6 +622,11 @@ $show-mgr:29.6875%;
     top: 0;}
 
 }
+@media screen and (min-width:1630px) {
+  .aside-list-info{
+    height: 128px;
+  }
+}
 @media screen and (max-width: 1200px)and(min-width: 1024px) {
   .show-wrap{
     width: 68%;}
@@ -629,6 +634,7 @@ $show-mgr:29.6875%;
 @media screen and (max-width: 1024px) and (min-width: 768px){
   .show-wrap{
     width: 64%;}
+
 }
 /*show页 内容部分结束*/
 
