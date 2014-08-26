@@ -57,7 +57,7 @@ a{
 .top-head {
   position: fixed;
   top: 0;
-  z-index: 9999;
+  z-index: 9;
   width: 100%;
   height: $top-head-height;
   background: #010101;
@@ -170,7 +170,7 @@ a{
 .left-nav {
   *float: left;
   position: fixed;
-  z-index: 9999;
+  z-index: 9;
   top: $top-head-height + 11;
   width: 82px;
 }
@@ -283,7 +283,7 @@ $show-mgr:29.6875%;
 }
 .buy-item{
   position: fixed;
-  z-index: 9999;
+  z-index: 9;
   top: 72px;
   right: 0;
   width: 24%;
@@ -551,7 +551,7 @@ $show-mgr:29.6875%;
 }
 .buy-item-add{
   position: fixed;
-  z-index: 9999;
+  z-index: 9;
   top: 72px;
   right: 0;
   width: 26%;
