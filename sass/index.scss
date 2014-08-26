@@ -18,8 +18,8 @@ $aside-li-mgr:8px;  //内容页底部列表margin-right
 $left-nav-list:108px; //侧边导航块宽高
 %pay-list{
   margin-bottom: 27px;
-  width: 150px;
-  height: 50px;
+  width: 174px;
+  height: 40px;
   outline: 1px solid $border-color2;
   overflow: hidden;
   cursor: pointer;
@@ -711,6 +711,9 @@ $show-mgr:29.6875%;
     }
   }
 }
+.payment-radio{
+  margin: 14px 15px 0 11px;
+  float: left;}
 .indent-bank-list{
   padding: 12px 0 0 40px;
   overflow: hidden;
@@ -728,7 +731,7 @@ $show-mgr:29.6875%;
 }
 .indent-wrap-left-item .active-pay{
   position: relative;
-  border: 2px solid #ff5426 \9;
+  border: 1px solid #ff5426 \9;
   outline: 2px solid #ff5426;
     &::after{
       content: '';
@@ -742,6 +745,10 @@ $show-mgr:29.6875%;
       @include icon1-sprite(active);
     }
 }
+.fl{
+  float: left;}
+.mgr30{
+  margin-right: 30px;}
 .mgt20{
   margin-top: 20px;}
 .indent-wrap-left-info{
