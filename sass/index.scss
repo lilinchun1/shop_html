@@ -1389,6 +1389,10 @@ $show-mgr:29.6875%;
     p{
       font-size: 1.4em;
       color: $n-font-color3;  }
+    i{
+      padding-left: 22px;
+      color: #ff0000;
+    }
 }
 .show-item-info-list{
   height: 52px;
@@ -1433,4 +1437,21 @@ $show-mgr:29.6875%;
   overflow: hidden;
   border-bottom: 1px solid $border-color3;
 }
-/*personal-list 结束*/
+/*personal-show 结束*/
+
+/*personal-show-pay 开始*/
+.personal-show-item-btn{
+  margin-top: 2px;
+  width: 146px;
+  height: 35px;
+  line-height: 35px;
+  background: #333333;
+  color: #ffffff;
+  font-size: 1.4em;
+  font-family: "Microsoft Yahei";
+  text-align: center;
+}
+.c-3399ff{
+  color: #3399ff;
+}
+/*personal-show-pay 结束*/
