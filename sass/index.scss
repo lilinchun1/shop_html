@@ -1318,6 +1318,14 @@ $show-mgr:29.6875%;
           color: $n-font-blue;
         }
     }
+    .div4{
+      border-right: 0 none;
+      text-align: center;
+      a{
+        font-size: 1.2em;
+        color: $n-font-blue;
+      }
+    }
   .item-pic{
     float: left;
     margin: 10px 0 0 10px;
@@ -1361,9 +1369,25 @@ $show-mgr:29.6875%;
   .state{
     line-height: 71px;
     font-size: 1.2em;
-    color: #ff9933;
     text-align: center;
+    color: #ff9933;
   }
+  .wait{
+    line-height: 71px;
+    font-size: 1.2em;
+    text-align: center;
+    color: #ff4133;
+  }
+}
+.personal-list-pay-btn{
+  margin:12px auto 8px auto;
+  width: 48px;
+  height: 25px;
+  display: block;
+  background: #333333;
+  font-size: 1.2em;
+  color: #ffffff;
+  font-family: "Microsoft Yahei";
 }
 /*personal-list 结束*/
 
