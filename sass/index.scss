@@ -637,6 +637,29 @@ $show-mgr:29.6875%;
     width: 64%;}
 
 }
+.aside-list-wrap-tt{
+  margin: 40px 0 30px 0;
+  position: relative;
+  height: 24px;
+  line-height: 24px;
+    .aside-line{
+      margin: 0 auto;
+      width: 62.5%;
+      height: 11px;
+      border-bottom: 1px solid #333;
+    }
+    h5{
+      margin-left: -66px;
+      padding: 0 22px;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      height: 24px;
+      font-size: 2.2em;
+      font-weight: normal;
+      background: $bgcolor;
+    }
+}
 /*show页 内容部分结束*/
 
 /*indent页 开始*/
@@ -1104,8 +1127,8 @@ $show-mgr:29.6875%;
   z-index: 10;
   //background-color: rgba(0,0,0,0.5); /*暗淡的背景*/
   background-color: #000000;
-  opacity: .5;
-  filter:alpha(opacity=50);
+  opacity: .6;
+  filter:alpha(opacity=60);
 }
 /*login页 结束*/
 
