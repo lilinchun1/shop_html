@@ -972,11 +972,23 @@ $show-mgr:29.6875%;
       z-index: 1;}
 }
 .login-tab-tt {
+  position: relative;
   height: 61px;
   background: #333333;
     .active-log{
       background: #ffffff;
       color: #000000;
+    }
+    .close{
+      position: absolute;
+      top: 3px;
+      right: 3px;
+      width: 16px;
+      height: 13px;
+      @include icon1-sprite(x-n);
+        &:hover{
+          @include icon1-sprite(x-h);
+        }
     }
 }
 .register,.log-in{
