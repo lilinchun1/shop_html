@@ -626,6 +626,11 @@ $show-mgr:29.6875%;
     top: 0;}
 
 }
+@media screen and (min-width:1920px) {
+  .aside-list-info{
+    height: 160px;
+  }
+}
 @media screen and (min-width:1630px) {
   .aside-list-info{
     height: 146px;
