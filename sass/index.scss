@@ -628,7 +628,10 @@ $show-mgr:29.6875%;
 
 }
 @media screen and (min-width:1920px) {
+  .aside-list li{
+    padding-bottom: 20px;}
   .aside-list-info{
+    top: -24px;
     height: 160px;
   }
 }
