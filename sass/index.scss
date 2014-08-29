@@ -627,15 +627,15 @@ $show-mgr:29.6875%;
     top: 0;}
 
 }
-@media screen and (min-width:1920px) {
+@media screen and (min-width:1761px) {
   .aside-list li{
     padding-bottom: 20px;}
-  .aside-list-info{
+  .aside-list .aside-list-info{
     top: -24px;
     height: 160px;
   }
 }
-@media screen and (min-width:1630px) {
+@media screen and (min-width:1630px) and (max-width: 1760px){
   .aside-list-info{
     height: 146px;
   }
